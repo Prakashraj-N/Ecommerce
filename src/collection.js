@@ -1,338 +1,4 @@
 import { useState } from "react";
-import menswear from "./menswear.png";
-import jacket from "./jacket.png";
-import hoodie from "./hoodie.png";
-import formal from "./formal.png";
-import casual from "./casual.png";
-import tshirt from "./tshirt.png";
-
-
-
-
-const Menswear=[
-    {
-        img:menswear,
-        name:"MENSWEAR",
-        price:"Rs. 999"
-    },
-    {
-        img:menswear,
-        name:"MENSWEAR",
-        price:"Rs. 999"
-    },
-    {
-        img:menswear,
-        name:"MENSWEAR",
-        price:"Rs. 999"
-    },
-    {
-        img:menswear,
-        name:"MENSWEAR",
-        price:"Rs. 999"
-    },
-    {
-        img:menswear,
-        name:"MENSWEAR",
-        price:"Rs. 999"
-    },
-    {
-        img:menswear,
-        name:"MENSWEAR",
-        price:"Rs. 999"
-    },
-    {
-        img:menswear,
-        name:"MENSWEAR",
-        price:"Rs. 999"
-    },
-    {
-        img:menswear,
-        name:"MENSWEAR",
-        price:"Rs. 999"
-    },
-    {
-        img:menswear,
-        name:"MENSWEAR",
-        price:"Rs. 999"
-    },
-    {
-        img:menswear,
-        name:"MENSWEAR",
-        price:"Rs. 999"
-    },
-]
-
-
-const Formal=[
-    {
-        img:formal,
-        name:"FORMAL",
-        price:"Rs. 999"
-    },
-    {
-        img:formal,
-        name:"FORMAL",
-        price:"Rs. 999"
-    },
-    {
-        img:formal,
-        name:"FORMAL",
-        price:"Rs. 999"
-    },
-    {
-        img:formal,
-        name:"FORMAL",
-        price:"Rs. 999"
-    },
-    {
-        img:formal,
-        name:"FORMAL",
-        price:"Rs. 999"
-    },
-    {
-        img:formal,
-        name:"FORMAL",
-        price:"Rs. 999"
-    },
-    {
-        img:formal,
-        name:"FORMAL",
-        price:"Rs. 999"
-    },
-    {
-        img:formal,
-        name:"FORMAL",
-        price:"Rs. 999"
-    },
-    {
-        img:formal,
-        name:"FORMAL",
-        price:"Rs. 999"
-    },
-    {
-        img:formal,
-        name:"FORMAL",
-        price:"Rs. 999"
-    },
-]
-
-
-const Casual=[
-    {
-        img:casual,
-        name:"CASUAL",
-        price:"Rs. 999"
-    },
-    {
-        img:casual,
-        name:"CASUAL",
-        price:"Rs. 999"
-    },
-    {
-        img:casual,
-        name:"CASUAL",
-        price:"Rs. 999"
-    },
-    {
-        img:casual,
-        name:"CASUAL",
-        price:"Rs. 999"
-    },
-    {
-        img:casual,
-        name:"CASUAL",
-        price:"Rs. 999"
-    },
-    {
-        img:casual,
-        name:"CASUAL",
-        price:"Rs. 999"
-    },
-    {
-        img:casual,
-        name:"CASUAL",
-        price:"Rs. 999"
-    },
-    {
-        img:casual,
-        name:"CASUAL",
-        price:"Rs. 999"
-    },
-    {
-        img:casual,
-        name:"CASUAL",
-        price:"Rs. 999"
-    },
-    {
-        img:casual,
-        name:"CASUAL",
-        price:"Rs. 999"
-    },
-]
-
-
-
-const Hoodie=[
-    {
-        img:hoodie,
-        name:"HOODIE",
-        price:"Rs. 999"
-    },
-    {
-        img:hoodie,
-        name:"HOODIE",
-        price:"Rs. 999"
-    },
-    {
-        img:hoodie,
-        name:"HOODIE",
-        price:"Rs. 999"
-    },
-    {
-        img:hoodie,
-        name:"HOODIE",
-        price:"Rs. 999"
-    },
-    {
-        img:hoodie,
-        name:"HOODIE",
-        price:"Rs. 999"
-    },
-    {
-        img:hoodie,
-        name:"HOODIE",
-        price:"Rs. 999"
-    },
-    {
-        img:hoodie,
-        name:"HOODIE",
-        price:"Rs. 999"
-    },
-    {
-        img:hoodie,
-        name:"HOODIE",
-        price:"Rs. 999"
-    },
-    {
-        img:hoodie,
-        name:"HOODIE",
-        price:"Rs. 999"
-    },
-    {
-        img:hoodie,
-        name:"HOODIE",
-        price:"Rs. 999"
-    },
-]
-
-
-
-const Tshirt=[
-    {
-        img:tshirt,
-        name:"TSHIRT",
-        price:"Rs. 999"
-    },
-    {
-        img:tshirt,
-        name:"TSHIRT",
-        price:"Rs. 999"
-    },
-    {
-        img:tshirt,
-        name:"TSHIRT",
-        price:"Rs. 999"
-    },
-    {
-        img:tshirt,
-        name:"TSHIRT",
-        price:"Rs. 999"
-    },
-    {
-        img:tshirt,
-        name:"TSHIRT",
-        price:"Rs. 999"
-    },
-    {
-        img:tshirt,
-        name:"TSHIRT",
-        price:"Rs. 999"
-    },
-    {
-        img:tshirt,
-        name:"TSHIRT",
-        price:"Rs. 999"
-    },
-    {
-        img:tshirt,
-        name:"TSHIRT",
-        price:"Rs. 999"
-    },
-    {
-        img:tshirt,
-        name:"TSHIRT",
-        price:"Rs. 999"
-    },
-    {
-        img:tshirt,
-        name:"TSHIRT",
-        price:"Rs. 999"
-    },
-]
-
-const Jacket=[
-    {
-        img:jacket,
-        name:"JACKET",
-        price:"Rs. 999"
-    },
-    {
-        img:jacket,
-        name:"JACKET",
-        price:"Rs. 999"
-    },
-    {
-        img:jacket,
-        name:"JACKET",
-        price:"Rs. 999"
-    },
-    {
-        img:jacket,
-        name:"JACKET",
-        price:"Rs. 999"
-    },
-    {
-        img:jacket,
-        name:"JACKET",
-        price:"Rs. 999"
-    },
-    {
-        img:jacket,
-        name:"JACKET",
-        price:"Rs. 999"
-    },
-    {
-        img:jacket,
-        name:"JACKET",
-        price:"Rs. 999"
-    },
-    {
-        img:jacket,
-        name:"MENSWEAR",
-        price:"Rs. 999"
-    },
-    {
-        img:jacket,
-        name:"JACKET",
-        price:"Rs. 999"
-    },
-    {
-        img:jacket,
-        name:"JACKET",
-        price:"Rs. 999"
-    },
-
-]
 
 
 
@@ -341,7 +7,13 @@ const Jacket=[
 
 
 
-function Collection(){
+
+
+
+
+
+
+function Collection({Menswear,Formal,Casual,Tshirt,Jacket,Hoodie,handlePreview}){
 
     const [data,setdata]= useState(Menswear);
 
@@ -373,6 +45,9 @@ function Collection(){
     }
 
 
+    
+
+    
 
 
 
@@ -393,7 +68,7 @@ function Collection(){
 
             <div className="collections">
 
-                <Collectionbox data={data}/>
+                <Collectionbox handlePreview={handlePreview} data={data}/>
 
                 
 
@@ -413,11 +88,18 @@ function Collection(){
 
 
 
-function Collectionbox({data}){
+function Collectionbox({data,handlePreview}){
+
+    
+
+
+
+
+
     return(
     data.map((data)=>
         
-            <div className="collection-blk">
+            <div role="button" onClick={()=>handlePreview(data.name,data.price,data.img)} className="collection-blk">
                     <img className="collection-blk-img" src={data.img} alt="blk"/>
                     <p className="collection-blk-p" >{data.name}</p>
                     <p >{data.price}</p>
